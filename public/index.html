@@ -1,0 +1,693 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+  <link href="./css/tailwindall.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/output.css">
+  <link rel="stylesheet" href="./css/styles.css">
+
+
+  <title>Alphonsus's Portfolio</title>
+</head>
+
+<body class="bg-white dark:bg-gray-900">
+
+  <header>
+    <nav x-data="{ isOpen: false }" class="bg-stone-50 shadow dark:bg-gray-800">
+      <div class="container px-6 py-4 mx-auto">
+        <div class="lg:flex lg:items-center">
+          <div class="flex items-center justify-between">
+            <a href="#">
+              <img class="w-auto h-6 sm:h-7 mt-1" src="img/logo.png" alt="">
+            </a>
+
+            <!-- Mobile menu button -->
+            <div class="flex lg:hidden">
+              <button @click="isOpen = !isOpen" type="button"
+                class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
+                aria-label="toggle menu">
+                <span x-show="!isOpen" class="material-symbols-outlined" id="menu">menu</span>
+                <span x-show="isOpen" class="material-symbols-outlined" id="menuclose">close</span>
+              </button>
+            </div>
+          </div>
+
+          <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
+            class="absolute inset-x-0 z-20 flex-1 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between">
+            <div
+              class="flex flex-col text-gray-600 capitalize dark:text-gray-300 lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center">
+              <a href="#"
+                class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-blue-500 dark:hover:text-blue-300"
+                @click="isOpen = false">About</a>
+                <a href="#skills"
+                class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-blue-500 dark:hover:text-blue-300"
+                @click="isOpen = false">Skills</a>
+              <a href="#work"
+                class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-blue-500 dark:hover:text-blue-300"
+                @click="isOpen = false">Work</a>
+                <a href="#project"
+                class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-blue-500 dark:hover:text-blue-300"
+                @click="isOpen = false">Projects</a>
+              <a href="#contact"
+                class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-blue-500 dark:hover:text-blue-300"
+                @click="isOpen = false">Contact</a>
+            </div>
+
+          </div>
+
+
+          <div class="hidden lg:flex justify-center mt-6 lg:flex lg:mt-0 lg:-mx-2">
+            <a href="https://www.linkedin.com/in/alphonsus-lay-b37a812b1/"
+            target="_blank" class="mx-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+              aria-label="LinkedIn">
+              <img class="w-5 h-5 fill-current" src="img/linkedin.png" alt="">
+            </a>
+
+            <a href="https://github.com/alphonsuslay"
+            target="_blank" class="mx-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+              aria-label="GitHub">
+              <img class="w-5 h-5 fill-current" src="img/github.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- Section 1 -->
+  <section class="bg-blue-50 dark:bg-gray-900">
+    <div class="container px-6 py-16 mx-auto text-center">
+      <div class="max-w-lg mx-auto">
+        <h1 class="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl">Alphonsus Lay Guang Yi</h1>
+
+        <p class="mt-6 text-gray-500 dark:text-gray-300 leading-7">
+          Diploma in Biomedical Engineering in Ngee Ann Polytechnic <br>
+        </p>
+
+        <div class="flex justify-center my-10">
+          <img class="rounded-full h-72 w-auto" src="img/pfp.jpeg" alt="">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Section 2 -->
+  <section class="bg-blue-50 dark:bg-gray-900">
+    <div class="container px-6 py-12 mx-auto flex justify-center">
+      <div class="grid grid-cols-1 gap-20 md:grid-cols-2 lg:grid-cols-3 justify-between">
+        <!-- Your content here -->
+        <div class="w-full md:w-80 lg:w-80">
+          <img class="w-auto h-10 mx-auto" src="img/np-logo.png" alt="">
+          <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white text-center">Ngee Ann Polytechnic</h1>
+          <p class="mt-2 text-gray-500 dark:text-gray-400 text-center">April 2021 - February 2024,
+            <span class="font-bold">Diploma in BME</span></p>
+        </div>
+
+        <div class="w-full md:w-80 lg:w-80">
+          <img class="w-auto h-10 mx-auto" src="img/hsc logo.png" alt="">
+          <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white text-center">Hai Sing Catholic School</h1>
+          <p class="mt-2 text-gray-500 dark:text-gray-400 text-center">January 2017 - December 2020,
+            <span class="font-bold">GCE O-Level </span></p>
+        </div>
+
+        <div class="w-full md:w-80 lg:w-80">
+          <img class="w-auto h-10 mx-auto" src="img/tns logo.png" alt="">
+          <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white text-center">Tao Nan School</h1>
+          <p class="mt-2 text-gray-500 dark:text-gray-400 text-center">January 2010 - December 2016,
+            <span class="font-bold">PSLE</span> </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <!-- Tabs Section -->
+  <section class="container px-6 py-10 mx-auto  dark:bg-gray-900">
+    <h1 class="px-4 text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">Skills</h1>
+    <p class=" px-4 py-5  text-gray-500  dark:text-gray-300">
+      Skills acquired through self-learning and formal education.
+    </p>
+
+    <div
+      class=" flex overflow-x-auto overflow-y-hidden border-b border-gray-200 whitespace-nowrap dark:border-gray-700">
+      <button id="AcademicBtn"
+        class="inline-flex items-center h-10 px-4 -mb-px text-base text-center text-blue-500 bg-transparent border-b-2 border-blue-500 sm:text-base dark:border-blue-400 dark:text-blue-300 whitespace-nowrap focus:outline-none">
+        Academic Skills
+      </button>
+
+      <button id="SelfTaughtBtn"
+        class="inline-flex items-center h-10 px-4 -mb-px text-base text-center text-gray-700 bg-transparent border-b-2 border-transparent sm:text-base dark:text-white whitespace-nowrap cursor-base focus:outline-none hover:border-gray-400">
+        Self-Taught Skills
+      </button>
+    </div>
+  </section>
+
+
+
+  <section id="AcademicSection" class=" bg-white dark:bg-gray-900">
+    <div class="container px-6 mb-12 mx-auto">
+
+      <p class="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
+
+      </p>
+
+      <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3">
+        <div class="space-y-3">
+          <img class="float-left w-auto h-10 mx-auto mr-2 " src="img/iot icon.png" alt="">
+
+          <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Internet of Things</h1>
+
+          <p class="text-gray-500 dark:text-gray-300">
+            Learned Internet of Things (IoT) concepts and applications (MQTT, HTTP)
+          </p>
+
+
+        </div>
+
+        <div class="space-y-3">
+          <img class="float-left w-auto h-10 mx-auto mr-2" src="img/cloudcomputing icon.png" alt="">
+
+          <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Cloud Computing</h1>
+
+          <p class="text-gray-500 dark:text-gray-300">
+            Applied AWS Academy knowledge in various projects, implementing Cloud Computing into projects
+          </p>
+
+
+        </div>
+
+        <div class="space-y-3">
+          <img class="float-left w-auto h-10 mx-auto mr-2" src="img/networking icon.png" alt="">
+
+          <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Networking</h1>
+
+          <p class="text-gray-500 dark:text-gray-300">
+            Studied networking protocols and gained hands-on experience in building network infrastructures, including
+            switches, servers, and clients.
+          </p>
+
+
+        </div>
+
+        <div class="space-y-3">
+          <img class="float-left w-auto h-10 mx-auto mr-2" src="img/clinical engineering icon.png" alt="">
+
+          <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Clinical Engineering</h1>
+
+          <p class="text-gray-500 dark:text-gray-300">
+            Learned and applied principles of clinical engineering, focusing on the intersection of healthcare and
+            technology.</p>
+
+
+        </div>
+
+        <div class="space-y-3">
+          <img class="float-left w-auto h-10 mx-auto mr-2" src="img/medical device icon.png" alt="">
+
+          <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Medical Instrumentation</h1>
+
+          <p class="text-gray-500 dark:text-gray-300">
+            Acquired skills in maintaining, troubleshooting, and managing medical equipment for optimal functionality
+            and patient safety.
+          </p>
+
+
+        </div>
+
+        <div class="space-y-3">
+          <img class="float-left w-auto h-10 mx-auto mr-2" src="img/maintenance icon.png" alt="">
+
+          <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Maintenance and Repair</h1>
+
+          <p class="text-gray-500 dark:text-gray-300">
+            Acquired hands-on experience in Preventive Maintenance, Corrective Maintenance, and Predictive Maintenance (
+            PM, CM, PdM)
+          </p>
+
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="SelfTaughtSection" class="hidden bg-white dark:bg-gray-900">
+    <div class="container px-6 mb-12 mx-auto">
+
+      <p class="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
+
+      </p>
+
+      <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3">
+        <div class="space-y-3">
+          <img class="float-left w-auto h-10 mx-auto mr-2" src="img/html-5.png" alt="">
+
+          <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">HTML</h1>
+
+          <p class="text-gray-500 dark:text-gray-300">
+            Self-taught HTML enthusiast, passionately applied skills in final year project for effective web
+            development.
+          </p>
+
+
+        </div>
+
+        <div class="space-y-3">
+          <img class="float-left w-auto h-10 mx-auto mr-2" src="img/css-3.png" alt="">
+
+          <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">CSS</h1>
+
+          <p class="text-gray-500 dark:text-gray-300">
+            CSS expert through self-learning, applied in final year project for visually appealing and responsive
+            designs.
+          </p>
+
+
+        </div>
+
+        <div class="space-y-3">
+          <img class="float-left w-auto h-10 mx-auto mr-2" src="img/js.png" alt="">
+
+          <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Javascript</h1>
+
+          <p class="text-gray-500 dark:text-gray-300">
+            Self-taught JavaScript enthusiast, adept at creating dynamic and interactive web solutions for enhanced user
+            experiences.
+          </p>
+
+
+        </div>
+
+        <div class="space-y-3">
+          <img class="float-left w-auto h-10 mx-auto mr-2" src="img/app-development.png" alt="">
+
+          <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Web Development</h1>
+
+          <p class="text-gray-500 dark:text-gray-300">
+            Versatile in web development, knowledgable in front-end framework like React, and adequate in backend tools
+            (Firebase DB, Auth, Web Hosting)
+          </p>
+
+
+        </div>
+
+        <div class="space-y-3">
+          <img class="float-left w-auto h-10 mx-auto mr-2" src="img/python.png" alt="">
+
+          <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Python</h1>
+
+          <p class="text-gray-500 dark:text-gray-300">
+            Proficient in Python, leveraging its versatility for various applications such as discord bot, automation,
+            and web scraping
+          </p>
+
+
+        </div>
+
+        <div class="space-y-3">
+          <img class="float-left w-auto h-10 mx-auto mr-2" src="img/tailwindcss icon.png" alt="">
+
+          <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Tailwindcss</h1>
+
+          <p class="text-gray-500 dark:text-gray-300">
+            knowledgable in Tailwind CSS, creating sleek and responsive designs with efficiency.
+          </p>
+
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  </section>
+  
+
+  <section id="work" class="bg-white dark:bg-gray-900">
+    <div class="container  py-10 mx-auto">
+        <h1 class="text-2xl px-8 font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">Work Experience</h1>
+
+        <p class="mt-4 px-8 text-gray-500 xl:mt-6 dark:text-gray-300">
+          Here are three highlights from my professional experience:
+        </p>
+
+        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+            <div class="p-8 bg-white space-y-3 border-2 border-gray-300 dark:border-gray-700 rounded-xl dark:bg-gray-800">
+                <span class="inline-block text-blue-500 dark:text-blue-400">
+                  <span class="material-symbols-outlined">
+                    work
+                    </span>
+                </span>
+
+                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Biomedical Engineering Intern</h1>
+
+                <p class="text-gray-500 dark:text-gray-300">
+                  Had the opportunity to work as an intern in idsMED where i got to learn not only hands-on experience but also administrative work.
+
+                  <br><br> <span class="text-blue-500">[IDS Medical Systems Pte Ltd]</span> <br>
+                  Mar 2023 - Aug 2023 · 6 mos
+                </p>
+            </div>
+
+            <div class="p-8 bg-white space-y-3 border-2 border-gray-300 dark:border-gray-700 rounded-xl dark:bg-gray-800">
+              <span class="inline-block text-blue-500 dark:text-blue-400">
+                <span class="material-symbols-outlined">
+                  work
+                  </span>
+              </span>
+
+              <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Coordinator / Packer</h1>
+
+              <p class="text-gray-500 dark:text-gray-300">
+                Began as a Packer at GrabMart, handling order packaging. Promoted to Coordinator, overseeing stock, logistics, and warehouse management.
+                
+                <br><br><span class="text-blue-500">[Grab, GrabMart]</span> <br>
+                Feb 2022 - Apr 2022 · 2 mos
+              </p>
+          </div>
+
+          <div class="p-8 bg-white space-y-3 border-2 border-gray-300 dark:border-gray-700 rounded-xl dark:bg-gray-800">
+            <span class="inline-block text-blue-500 dark:text-blue-400">
+              <span class="material-symbols-outlined">
+                work
+                </span>
+            </span>
+
+            <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Waiter</h1>
+
+            <p class="text-gray-500 dark:text-gray-300">
+            Served as a waiter at Mahota for 6 months Responsibilities ranges from counter duties to food service and cleaning. 
+
+            <br><br><span class="text-blue-500">[Mahota]</span> <br>
+            Nov 2020 - Apr 2021 · 6 mos
+            </p>
+        </div>
+        </div>
+    </div>
+  </section>
+
+  <section id="project" class=" mb-24 flex items-center bg-white dark:bg-gray-900">
+    <div class="container px-6 py-10 mx-auto">
+      <h1 class="px-4 text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">Projects</h1>
+      <p class=" px-4 py-5  text-gray-500  dark:text-gray-300">
+        List of the projects which i have done.
+      </p>
+
+
+        <div class="flex overflow-x-auto overflow-y-hidden border-b-2 border-gray-200 whitespace-nowrap dark:border-gray-700">
+            <button id="academicprojbtn"
+                class="h-12 px-8 py-2 -mb-px text-sm text-center text-blue-600 bg-transparent border-b-2 border-blue-500 sm:text-base dark:border-blue-400 dark:text-blue-300 whitespace-nowrap focus:outline-none">
+                Academic
+            </button>
+
+            <button id="personalprojbtn"
+                class="h-12 px-8 py-2 -mb-px text-sm text-center text-gray-700 bg-transparent border-b-2 border-gray-200 sm:text-base dark:text-white whitespace-nowrap cursor-base focus:outline-none dark:border-gray-700 dark:hover:border-gray-400 hover:border-gray-400">
+                Personal
+            </button>
+        </div>
+
+        <section id="AcademicWorkSection" class="hidden mt-8 space-y-8 lg:mt-12">
+            <section class="lg:flex lg:items-center">
+                <div class="lg:w-1/2 ">
+                    <p class="text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">FYP</p>
+                    <h2 class="mt-2 text-2xl font-semibold text-gray-800 capitalize dark:text-white">IoT Sensor Data to Cloud and Applications
+                    </h2>
+                    <p class="mt-8 text-gray-500 dark:text-gray-300">
+                      Displaying sensors state by sending the data to the cloud and then to the mobile and web app. <br>
+                      Use of telegram bot to get and display the values in telegram
+                    </p>
+                    <div class="flex gap-6">
+                      <a href="https://github.com/alphonsuslay/IRP5"   target="_blank" class="flex items-center mt-2 -mx-1 text-sm text-blue-500 capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                        <span class="mx-1">Github Repo</span>
+                      </a>
+                      <a href="https://irp-fyp-project.web.app/"   target="_blank" class="flex items-center mt-2 -mx-1 text-sm text-blue-500 capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                        <span class="mx-1">Project Showcase</span>
+                      </a>
+                    </div>
+                </div>
+
+                <div class="mt-4 lg:w-1/2 lg:mt-0">
+                    <img class="object-cover w-full h-auto rounded-lg md:h-96"
+                        src="img/dashboard-display.png"
+                        alt="dashboard img">
+                </div>
+            </section>
+        </section>
+
+        <section id="PersonalWorkSection" class=" mt-8 space-y-8 lg:mt-12">
+          <section class="lg:flex lg:items-center">
+              <div class="lg:w-1/2 ">
+                  <p class="text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">Web Dev</p>
+                  <h2 class="mt-2 text-2xl font-semibold text-gray-800 capitalize dark:text-white">Web Development Services 
+                  </h2>
+                  <p class="mt-8 text-gray-500 dark:text-gray-300">
+                    Developed a website to showcase & sell a curated range of programming services.
+                  </p>
+                  <a href="https://alphyshop.web.app"   target="_blank" class="flex items-center mt-2 -mx-1 text-sm text-blue-500 capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                    <span class="mx-1">Project Showcase</span>
+                </a>
+              </div>
+
+              <div class="mt-4 lg:w-1/2 lg:mt-0">
+                  <img class="object-cover w-full h-auto rounded-lg md:h-96"
+                      src="img/alphyshop img.png"
+                      alt="alphyshop img">
+              </div>
+          </section>
+
+          <section class="lg:flex lg:items-center">
+            <div class="lg:w-1/2 ">
+                <p class="text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">Web Dev</p>
+                <h2 class="mt-2 text-2xl font-semibold text-gray-800 capitalize dark:text-white">Portfolio Website
+                </h2>
+                <p class="mt-8 text-gray-500 dark:text-gray-300">
+                  Built a portfolio website to display my skills,  work experiences, and more.
+                </p>
+                <a href="#"  class="flex items-center mt-2 -mx-1 text-sm text-blue-500 capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                  <span class="mx-1">NIL</span>
+              </a>
+            </div>
+
+            <div class="mt-4 lg:w-1/2 lg:mt-0">
+                <img class="object-cover w-full h-auto rounded-lg md:h-96"
+                    src="img/portfolio img.png"
+                    alt="alphyshop img">
+            </div>
+          </section>
+
+            <section class="lg:flex lg:items-center">
+              <div class="lg:w-1/2 ">
+                  <p class="text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">Bot Dev</p>
+                  <h2 class="mt-2 text-2xl font-semibold text-gray-800 capitalize dark:text-white">Discord Bot 
+                  </h2>
+                  <p class="mt-8 text-gray-500 dark:text-gray-300">
+                    Crafted a versatile Discord bot with automation, customizable shops, and moderation commands.
+                  </p>
+                  <a href="https://github.com/alphonsuslay/DiscordBot"   target="_blank" class="flex items-center mt-2 -mx-1 text-sm text-blue-500 capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                    <span class="mx-1">Github Repo</span>
+                </a>
+              </div>
+
+              <div class="mt-4 lg:w-1/2 lg:mt-0">
+                  <img class="object-cover w-full h-auto rounded-lg md:h-96"
+                      src="img/discord bot img.png"
+                      alt="alphyshop img">
+              </div>
+          </section>
+        </section>
+
+    </div>
+  </section>
+
+  <section id="contact" class="bg-stone-50 dark:bg-gray-800">
+    <div class="container px-6 py-12 mx-auto">
+        <div class="text-center">
+
+            <h1 class="my-6 text-2xl font-semibold text-gray-800 md:text-3xl dark:text-white">Contact Me</h1>
+
+        </div>
+
+        <div class="grid grid-cols-1 gap-12 mt-10 md:grid-cols-2 lg:grid-cols-3">
+            <div class="flex flex-col items-center justify-center text-center">
+                    <span class="material-symbols-outlined text-blue-500">
+                      mail
+                      </span>
+
+                <h2 class="mt-4 text-lg font-medium text-gray-800 dark:text-white">Email Address</h2>
+                <p class="mt-2 text-blue-500 dark:text-blue-400">alphonsuslgy@gmail.com</p>
+            </div>
+
+            <div class="flex flex-col items-center justify-center text-center">
+              <span class="material-symbols-outlined text-blue-500">
+                chat
+                </span>
+
+                <h2 class="mt-4 text-lg font-medium text-gray-800 dark:text-white">Telegram</h2>
+                <p class="mt-2 text-blue-500 dark:text-blue-400">@alphylgy</p>
+            </div>
+
+            <div class="flex flex-col items-center justify-center text-center">
+              <span class="material-symbols-outlined text-blue-500">
+                call
+                </span>
+
+                <h2 class="mt-4 text-lg font-medium text-gray-800 dark:text-white">Phone</h2>
+                <p class="mt-2 text-blue-500 dark:text-blue-400">-----------</p>
+            </div>
+
+
+        </div>
+    </div>
+  </section>
+
+
+  <footer class="bg-stone-50 dark:bg-gray-800">
+    <div class="container px-6 py-8 mx-auto">
+        <div class="flex flex-col items-center text-center">
+            <div class="flex flex-wrap justify-center mt-6 mx-4">
+                <a href="#" class="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400" aria-label="Reddit"> Home </a>
+                
+                <a href="#" class="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400" aria-label="Reddit"> About </a>
+                
+                <a href="#" class="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400" aria-label="Reddit"> Teams </a>
+
+                <a href="#" class="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400" aria-label="Reddit"> Privacy </a>
+
+                <a href="#" class="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400" aria-label="Reddit"> Cookies </a>
+            </div>
+
+        </div>
+
+        <hr class="my-6 border-gray-200 md:my-10 dark:border-gray-700" />
+
+        <div class="flex flex-col items-center sm:flex-row gap-2 sm:justify-between pb-4">
+            <p class="text-sm text-gray-500 dark:text-gray-300">© Copyright 2024. All Rights Reserved.</p>
+
+            <div class="flex mx-2">
+                
+
+              <a href="https://www.linkedin.com/in/alphonsus-lay-b37a812b1/" target="_blank"
+              class="mx-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+              aria-label="LinkedIn">
+              <img class="w-5 h-5 fill-current" src="img/linkedin.png" alt="">
+            </a>
+
+            <a href="https://github.com/alphonsuslay" target="_blank"
+              class="mx-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+              aria-label="GitHub">
+              <img class="w-5 h-5 fill-current" src="img/github.png" alt="">
+            </a>
+            </div>
+        </div>
+    </div>
+  </footer>
+
+
+
+
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+
+    const firebaseConfig = {
+      apiKey: "",
+      authDomain: "",
+      projectId: "",
+      storageBucket: "",
+      messagingSenderId: "",
+      appId: "",
+      measurementId: ""
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const featureBtn = document.getElementById("AcademicBtn");
+      const pricingBtn = document.getElementById("SelfTaughtBtn");
+      const featureSection = document.getElementById("AcademicSection");
+      const pricingSection = document.getElementById("SelfTaughtSection");
+
+      // Function to hide sections
+      function hideSections() {
+        featureSection.classList.add("hidden");
+        pricingSection.classList.add("hidden");
+      }
+
+      // Function to reset button styles
+      function resetButtonStyles() {
+        featureBtn.className = "inline-flex items-center h-10 px-4 -mb-px text-base text-center text-gray-700 bg-transparent border-b-2 border-transparent sm:text-base dark:text-white whitespace-nowrap cursor-base focus:outline-none hover:border-gray-400";
+        pricingBtn.className = "inline-flex items-center h-10 px-4 -mb-px text-base text-center text-gray-700 bg-transparent border-b-2 border-transparent sm:text-base dark:text-white whitespace-nowrap cursor-base focus:outline-none hover:border-gray-400";
+      }
+
+      // Function to set active styles and show respective section
+      function setActiveStylesAndShowSection(btn, section) {
+        resetButtonStyles();
+        btn.classList = "inline-flex items-center h-10 px-4 -mb-px text-base text-center text-blue-500 bg-transparent border-b-2 border-blue-500 sm:text-base dark:border-blue-400 dark:text-blue-300 whitespace-nowrap focus:outline-none";
+        section.classList.remove("hidden");
+      }
+
+      // Add click event listeners to buttons
+      featureBtn.addEventListener("click", function () {
+        hideSections();
+        setActiveStylesAndShowSection(featureBtn, featureSection);
+      });
+
+      pricingBtn.addEventListener("click", function () {
+        hideSections();
+        setActiveStylesAndShowSection(pricingBtn, pricingSection);
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const academicProjBtn = document.getElementById("academicprojbtn");
+      const personalProjBtn = document.getElementById("personalprojbtn");
+      const academicWorkSection = document.getElementById("AcademicWorkSection");
+      const personalWorkSection = document.getElementById("PersonalWorkSection");
+
+      // Function to handle the button clicks
+      function handleButtonClick(showSection, hideSection, activeBtn, inactiveBtn) {
+        showSection.classList.remove("hidden");
+        hideSection.classList.add("hidden");
+
+        activeBtn.classList = "h-12 px-8 py-2 -mb-px text-sm text-center text-blue-600 bg-transparent border-b-2 border-blue-500 sm:text-base dark:border-blue-400 dark:text-blue-300 whitespace-nowrap focus:outline-none";
+        inactiveBtn.classList = "h-12 px-8 py-2 -mb-px text-sm text-center text-gray-700 bg-transparent border-b-2 border-gray-200 sm:text-base dark:text-white whitespace-nowrap cursor-base focus:outline-none dark:border-gray-700 dark:hover:border-gray-400 hover:border-gray-400";
+      }
+
+      // Event listener for the Academic Project Button
+      academicProjBtn.addEventListener("click", function () {
+        handleButtonClick(academicWorkSection, personalWorkSection, academicProjBtn, personalProjBtn);
+      });
+
+      // Event listener for the Personal Project Button
+      personalProjBtn.addEventListener("click", function () {
+        handleButtonClick(personalWorkSection, academicWorkSection, personalProjBtn, academicProjBtn);
+      });
+    });
+  </script>
+
+
+  
+
+
+
+
+</body>
+
+</html>
